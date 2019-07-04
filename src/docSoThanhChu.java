@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class docSoThanhChu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập vào số:");
+        System.out.print("Nhập vào số: ");
         int number = scanner.nextInt();
         String string = "";
         if (0 < number && number < 10) {
-            string = doiSoThanhChu.chuyenSoThanhChu(number);
+            string = docSoThanhChu.chuyenSoThanhChu(number);
         } else if (number < 20) {
-            string = "Mười " + doiSoThanhChu.chuyenSoThanhChu(number % 10);
+            string = "Mười " + docSoThanhChu.chuyenSoThanhChu(number % 10);
         } else if (number < 100) {
-            string = doiSoThanhChu.chuyenSoThanhChu(number / 10) + " mươi " + doiSoThanhChu.chuyenSoThanhChu(number % 10);
+            string = docSoThanhChu.chuyenSoThanhChu(number / 10) + " mươi " + docSoThanhChu.chuyenSoThanhChu(number % 10);
         }
         System.out.println("" + string);
     }
